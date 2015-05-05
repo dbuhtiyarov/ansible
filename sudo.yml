@@ -11,6 +11,6 @@
 #      sudo: yes
 
      - name: echo
-       shell: yum install httpd 
+       shell: sleep 1m 
        sudo: yes
        ignore_errors: yes
