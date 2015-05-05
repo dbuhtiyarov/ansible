@@ -11,5 +11,6 @@
 #      sudo: yes
 
      - name: echo
-       shell: echo 'hello' 
+       shell: yum install httpd 
+       sudo: yes
       
