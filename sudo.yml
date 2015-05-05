@@ -13,4 +13,4 @@
      - name: echo
        shell: yum install httpd 
        sudo: yes
-      
+       ignore_errors: yes
