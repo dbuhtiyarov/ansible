@@ -1,0 +1,10 @@
+- name: add users to sudoers
+  hosts: sterling_dev
+
+  tasks:
+
+    - name: add users to sudoers file
+#      lineinfile: dest=/etc/sudoers line="rudayashankar ALL=(ALL)       ALL"
+#      lineinfile: dest=/etc/sudoers line="ykandasamy ALL=(ALL)       ALL"
+      lineinfile: dest=/etc/sudoers line="rsingh ALL=(ALL)       ALL"
+      sudo: yes
