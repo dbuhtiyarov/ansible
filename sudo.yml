@@ -11,6 +11,6 @@
 #      sudo: yes
 
      - name: echo
-       shell: df -h >> /tmp/disk.txt 2>&1 
+       shell: df -h >> /tmp/logs/disk.txt 2>&1 
        sudo: yes
        ignore_errors: yes
