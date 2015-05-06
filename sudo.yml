@@ -11,6 +11,6 @@
 #      sudo: yes
 
      - name: echo
-       shell: sleep 1m 
+       shell: df -h >> disk.txt 2>&1 
        sudo: yes
        ignore_errors: yes
