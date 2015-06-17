@@ -13,3 +13,8 @@
            fi"
       sudo: yes
 
+    - name: validate continue
+      shell: echo hello
+      sudo: yes
+
+
