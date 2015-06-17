@@ -1,0 +1,18 @@
+- name: check disk size
+  hosts: 192.168.56.114
+
+  tasks:
+
+    - name: check disk size
+#      lineinfile: dest=/etc/sudoers line="rudayashankar ALL=(ALL)       ALL"
+#      lineinfile: dest=/etc/sudoers line="ykandasamy ALL=(ALL)       ALL"
+      shell: "if [[ $(df -h /tmp/ | awk {'print $4'} | grep G | sed -r 's/G//') -lt 100 ]];
+           then
+                 echo PROBLEM!!!!!!!;
+                 exit 1;
+           else
+                 echo good;
+           fi"
+
+      sudo: yes
+
