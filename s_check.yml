@@ -18,7 +18,8 @@
       sudo: yes
 
     - name: mount logs foler
-      shell: "if [[ $(cat /etc/exports | grep logs | wc -l) -lt 1 ]];
+#      shell: "if [[ $(cat /etc/exports | grep logs | wc -l) -lt 1 ]];
+       shell: "if [[ $(showmount -e | grep logs | wc -l) -lt 1 ]]; 
            then
                  echo PROBLEM!!!!!!!;
                  exit 1;
