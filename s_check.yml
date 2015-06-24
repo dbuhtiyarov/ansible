@@ -4,7 +4,10 @@
   tasks:
 
     - name: check disk size         
-      shell: "if [[ $(df -h /tmp/ | awk {'print $4'} | grep G | sed -r 's/G//') -lt 1 ]];
+      shell: "float=`df -h /tmp/ | awk {'print $4'} | grep G | sed -r 's/G//'`
+              int=${float%.*}
+
+                if [[ $int -lt 1 ]];
            then
                  echo PROBLEM!!!!!!!;
                  exit 1;
