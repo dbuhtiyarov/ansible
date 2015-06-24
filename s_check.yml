@@ -8,7 +8,7 @@
               float=`df -h $folder | awk {'print $4'} | grep G | sed -r 's/G//'`
               int=${float%.*}
 
-              if [[ $int -lt 1 ]];
+              if [[ $int -lt 100 ]];
                 then
                   echo PROBLEM!!!!!!!;
                   exit 1;
