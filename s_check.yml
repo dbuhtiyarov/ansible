@@ -4,16 +4,17 @@
   tasks:
 
     - name: check disk size         
-      shell: "float=`df -h /tmp/ | awk {'print $4'} | grep G | sed -r 's/G//'`
+      shell: "folder=/tmp/
+              float=`df -h $folder | awk {'print $4'} | grep G | sed -r 's/G//'`
               int=${float%.*}
 
-                if [[ $int -lt 1 ]];
-           then
-                 echo PROBLEM!!!!!!!;
-                 exit 1;
-           else
-                 echo good;
-           fi"
+              if [[ $int -lt 1 ]];
+                then
+                  echo PROBLEM!!!!!!!;
+                  exit 1;
+              else
+                  echo good;
+              fi"
       sudo: yes
 
     - name: validate continue
