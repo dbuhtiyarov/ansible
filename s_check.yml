@@ -14,7 +14,6 @@
                   exit 1;
               else
                   echo good;
-                  echo sanity success | mail -s Sanity status Dmitry_Buhtiyarov@epam.com; 
               fi"
       sudo: yes
 
