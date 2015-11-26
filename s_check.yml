@@ -14,6 +14,7 @@
                   exit 1;
               else
                   echo good;
+                  echo $folder;
               fi"
       sudo: yes
 
