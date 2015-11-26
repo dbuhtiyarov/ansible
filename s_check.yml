@@ -5,6 +5,7 @@
 
     - name: check disk size         
       shell: "folder=/tmp/
+              env=4 
               float=`df -h $folder | awk {'print $4'} | grep G | sed -r 's/G//'`
               int=${float%.*}
 
@@ -15,6 +16,7 @@
               else
                   echo good;
                   echo $folder;
+                  echo $env;
               fi"
       sudo: yes
 
