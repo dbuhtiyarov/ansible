@@ -2,11 +2,11 @@
   hosts: size
 
   vars: 
-    action: "{{ action }}"
+    action1: "{{ action }}"
 
   tasks:
 
     - name: check disk size
-      shell:        echo "$action"
+      shell:        echo "$action1"
       sudo: yes
 
