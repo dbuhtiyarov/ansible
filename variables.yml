@@ -1,8 +1,8 @@
 - name: check disk size
   hosts: size
 
-  vars: 
-    action1: "{{ action }}"
+  #vars: 
+  #  action1: "{{ action }}"
 
   tasks:
 
