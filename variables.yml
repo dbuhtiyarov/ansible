@@ -1,0 +1,12 @@
+- name: check disk size
+  hosts: size
+
+  vars: 
+    action: "{{ action }}"
+
+  tasks:
+
+    - name: check disk size
+      shell:        echo "$action"
+      sudo: yes
+
