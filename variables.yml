@@ -7,6 +7,6 @@
   tasks:
 
     - name: check disk size
-      shell:        echo "$action1"
+      shell:        echo {{ action1 }}
       sudo: yes
 
