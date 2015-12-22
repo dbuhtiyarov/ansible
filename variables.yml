@@ -2,7 +2,7 @@
   hosts: size
 
   vars: 
-    action1: {{ action }}
+    action1: "{{ action }}"
 
   tasks:
 
