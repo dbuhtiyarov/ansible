@@ -1,1 +1,21 @@
-test
+- name: tomcat test deploy
+  hosts: tomcat
+#  connection: local
+  vars:
+   url:https: tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+   webapp_folder: /usr/share/tomcat/webapps
+
+  tasks:
+
+     - name: check tomcat version
+       shell: echo `tomcat version | awk {'print $4'} | head -1`
+       sudo: yes
+       register: version
+
+     - name: download test artefact
+       get_url: url="{{ url }}" dest="{{ webapp_folder }}"
+       sudo: yes
+
+     
+       
+
