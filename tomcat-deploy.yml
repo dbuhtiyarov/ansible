@@ -14,7 +14,7 @@
        register: version
 
      - name: download test artefact
-       get_url: url="{{ url }}" dest="{{ webapp_folder }}" 
+       get_url: url="{{ url }}" dest="{{ webapp_folder }}" owner="{{ tomcat_user }}"
        sudo: yes
        #sudo_user: "{{ tomcat_user }}"
 
