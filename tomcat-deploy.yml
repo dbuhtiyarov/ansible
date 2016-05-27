@@ -2,7 +2,7 @@
   hosts: tomcat
 #  connection: local
   vars:
-   url:https: tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+   url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
    webapp_folder: /usr/share/tomcat/webapps
 
   tasks:
