@@ -16,7 +16,7 @@
      - name: download test artefact
        get_url: url="{{ url }}" dest="{{ webapp_folder }}" 
        sudo: yes
-       sudo_user: "{{ tomcat_user }}"
+       #sudo_user: "{{ tomcat_user }}"
 
      
        
