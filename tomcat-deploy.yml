@@ -4,6 +4,7 @@
   vars:
    url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
    webapp_folder: /usr/share/tomcat/webapps
+   tomcat_user: tomcat
 
   tasks:
 
@@ -13,8 +14,9 @@
        register: version
 
      - name: download test artefact
-       get_url: url="{{ url }}" dest="{{ webapp_folder }}"
+       get_url: url="{{ url }}" dest="{{ webapp_folder }}" 
        sudo: yes
+       sudo_user: "{{ tomcat_user }}"
 
      
        
