@@ -22,7 +22,7 @@
        #sudo_user: "{{ tomcat_user }}"
       
      - name: unarchive
-       unarchive: src=tomcat-test-{{ Artefact_Name}}.tar.gz dest="{{ webapp_folder }}" 
+       unarchive: src=tomcat-test-{{ Artefact_Name}}.tar.gz dest="{{ webapp_folder }}" copy=no 
        sudo: yes
        
 
