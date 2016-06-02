@@ -3,7 +3,7 @@
 #  connection: local
   vars:
 #   url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
-   url: 192.168.56.125:8081/nexus/content/repositories/dima/tomcat/tomcat-test/"{{ Artefact_Name }}"/tomcat-test-"{{ Artefact_Name}}".tar.gz
+   url: 192.168.56.125:8081/nexus/content/repositories/dima/tomcat/tomcat-test/{{ Artefact_Name }}/tomcat-test-{{ Artefact_Name}}.tar.gz
    webapp_folder: /usr/share/tomcat/webapps
    tomcat_user: tomcat
    user: admin
