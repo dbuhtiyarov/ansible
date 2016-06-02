@@ -2,9 +2,12 @@
   hosts: tomcat
 #  connection: local
   vars:
-   url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+#   url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+   url: 192.168.56.125:8081/nexus/content/repositories/dima/tomcat/tomcat-test/"{{ Artefact_Name }}"/tomcat-test-"{{ Artefact_Name}}".tar.gz
    webapp_folder: /usr/share/tomcat/webapps
    tomcat_user: tomcat
+   user: admin
+   pass: admin123  
 
   tasks:
 
@@ -14,7 +17,7 @@
        register: version
 
      - name: download test artefact
-       get_url: url="{{ url }}" dest="{{ webapp_folder }}" owner="{{ tomcat_user }}" group="{{ tomcat_user }}"
+       get_url: url="{{ url }}" dest="{{ webapp_folder }}" owner="{{ tomcat_user }}" group="{{ tomcat_user }}" url_username="{{ user }}" url_password="{{ pass }}"
        sudo: yes
        #sudo_user: "{{ tomcat_user }}"
 
