@@ -20,6 +20,12 @@
        get_url: url="{{ url }}" dest="{{ webapp_folder }}" owner="{{ tomcat_user }}" group="{{ tomcat_user }}" url_username="{{ user }}" url_password="{{ pass }}"
        sudo: yes
        #sudo_user: "{{ tomcat_user }}"
+      
+     - name: unarchive
+       unarchive: src=tomcat-test-{{ Artefact_Name}}.tar.gz 
+       sudo: yes
+       
+
 
      
        
