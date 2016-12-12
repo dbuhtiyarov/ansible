@@ -11,7 +11,7 @@
 
   tasks:
 
-     - name: check tomcat version
+     - name: check tomcat version!
        shell: echo `tomcat version | awk {'print $4'} | head -1`
        sudo: yes
        register: version
